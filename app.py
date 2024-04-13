@@ -1,7 +1,7 @@
 import pandas as pd
-from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.model_selection import train_test_split
+from sklearn.feature_extraction.text import TfidfVectorizer
 import streamlit as st
 
 # Load the dataset
@@ -15,7 +15,7 @@ y = data['v1']  # Target variable
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 # Vectorize the text data
-vectorizer = CountVectorizer()
+vectorizer = TfidfVectorizer()
 X_train_vec = vectorizer.fit_transform(X_train)
 X_test_vec = vectorizer.transform(X_test)
 
@@ -27,7 +27,7 @@ model.fit(X_train_vec, y_train)
 st.title('Spam Filter')
 
 # Text input for user to input text
-text_input = st.text_area('Enter email for cheak:', '')
+text_input = st.text_area('Enter email or message:', '')
 
 if st.button('Predict'):
     # Preprocess the input text
