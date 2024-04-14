@@ -40,7 +40,7 @@ This code is an implementation of a simple spam filter using a Multinomial Naive
 
 - Clone the repository:
 ```bash
-git clone https://github.com/yourusername/spam-filter-app.git
+git clone https://github.com/TanishArya/SpamFilter.git
 ```
 
 - Install the required Python packages:
