@@ -82,7 +82,7 @@ Open your web browser and go to http://localhost:8501 to access the application.
 ### 3. Dataset
 The dataset used for training the model is included as spam.csv. It contains text messages labeled as either 'spam' or 'ham' (not spam).
 
-### 4. Library Uses
+### 4. Dependencies
 
 ##### 1. Pandas (import pandas as pd):
 
